@@ -16,7 +16,7 @@ export default function Dropdown({ items, type }) {
         <ChevronDown size={18} className="text-gray-500" />
       </button>
       {open && (
-        <ul className=" mt-4 w-full border rounded bg-white shadow-md">
+        <ul className={`${!type && 'absolute'  } mt-4 w-full border rounded bg-white shadow-md`}>
           {items.map((option, index) => (
             <li
               key={index}

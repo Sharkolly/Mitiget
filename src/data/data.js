@@ -51,4 +51,27 @@ export const document_type = [
 export const departments = ["Finance", "IT", "HR", "Legal", "Operations"];
 export const tags = ["#Finance", "#IT", "#HR", "#Legal", "#Operations"];
 
-export const options_menu = ['View History', 'Archive Policy', 'Duplicate Policy']
+export const options_menu = [
+  "View History",
+  "Archive Policy",
+  "Duplicate Policy",
+];
+
+export const checkBtn = [
+  {
+    date: "10-07-2025 10:12PM",
+    name: "History Approved",
+  },
+  {
+    date: "10-07-2025 22:12PM",
+    name: "Approved by Mitiget",
+  },
+  {
+    date: "10-07-2025 10:12PM",
+    name: "History Approved",
+  },
+  {
+    date: "10-07-2025 10:12PM",
+    name: "History Approved",
+  },
+];

@@ -10,11 +10,14 @@ import OptionsMenu from "./OptionsMenu";
 import { useState } from "react";
 import { useContextStore } from "../../hooks/ContextStore";
 import { toast } from "react-toastify";
+import CheckList from "../CheckList";
 
 const Results = ({ results }) => {
-  const {  setViewIndex, setToggleView,  } = useContextStore();
+  const { setViewIndex, setToggleView } = useContextStore();
   const [OptionIndex, setOptionIndex] = useState(null);
   const [toggleOptionIndex, setToggleOptionIndex] = useState(false);
+  const [auditIndex, setAuditIndex] = useState(null);
+  const [toggleAuditIndex, setToggleAuditIndex] = useState(false);
   const [optionsMenu, setOptionsMenu] = useState([
     "View History",
     "Archive Policy",
@@ -27,16 +30,21 @@ const Results = ({ results }) => {
   };
 
   const viewBtn = (index) => {
-    setToggleView(true)
+    setToggleView(true);
     setViewIndex(index + 1);
+  };
+  const auditBtn = (index) => {
+    console.log(index)
+    setAuditIndex(auditIndex === index ? null : index);
+    setToggleAuditIndex(!toggleAuditIndex);
   };
 
   const downloading = () => {
-    toast('✅ Downloading Please wait ....', {
-         className: "bg-primary text-white shadow-md font-bold",
+    toast("✅ Downloading Please wait ....", {
+      className: "bg-primary text-white shadow-md font-bold",
       progressClassName: "bg-primary",
-    })
-  }
+    });
+  };
   return (
     <section className="mt-3">
       <h2>Search Results: {results.length}</h2>
@@ -92,9 +100,9 @@ const Results = ({ results }) => {
                       </span>
                       <span>{result.status}</span>
                     </button>
-                    {result.tags.map((tag, index) => (
+                    {result.tags.map((tag, idx) => (
                       <div
-                        key={index}
+                        key={idx}
                         className={`text-xs px-2 py-1 rounded-full flex items-center gap-1 justify-end  `}
                       >
                         <span
@@ -108,7 +116,18 @@ const Results = ({ results }) => {
                         {tag.name === "Attestation" ? (
                           <span className="h-3 w-3 bg-green-700 rounded-full"></span>
                         ) : (
-                          <CiCircleCheck />
+                          <div
+                            className="relative cursor-pointer"
+                            onClick={() => auditBtn(index)}
+                          >
+                            <CiCircleCheck />
+
+                            {auditIndex === index && toggleAuditIndex && (
+                              <div className="absolute left-[-390px] z-99  w-[400px] ">
+                                <CheckList />
+                              </div>
+                            )}
+                          </div>
                         )}
                       </div>
                     ))}
@@ -118,13 +137,19 @@ const Results = ({ results }) => {
             </div>
 
             <div className="flex justify-center gap-4 mt-0">
-              <button className="bg-primary cursor-pointer px-4 py-1 text-white rounded-md flex gap-2 items-center" onClick={() => viewBtn(index)}>
+              <button
+                className="bg-primary cursor-pointer px-4 py-1 text-white rounded-md flex gap-2 items-center"
+                onClick={() => viewBtn(index)}
+              >
                 <span>
                   <MdOutlineViewHeadline />
                 </span>{" "}
                 <p>View</p>
               </button>
-              <button className="bg-white cursor-pointer px-4 py-1 text-black rounded-md border-1 border-gray-400 flex gap-2 items-center" onClick={downloading} >
+              <button
+                className="bg-white cursor-pointer px-4 py-1 text-black rounded-md border-1 border-gray-400 flex gap-2 items-center"
+                onClick={downloading}
+              >
                 {" "}
                 <span className="text-primary ">
                   <GoDownload />
