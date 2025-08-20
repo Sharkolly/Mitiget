@@ -4,7 +4,7 @@ export default function Section() {
   return (
     <div>
       <div className="px-5 mt-8">
-        <div className=" items-center flex gap-1 border-1 border-gray-200 w-[40%] max-xl:w-[30%] ">
+        <div className=" items-center flex gap-1 border-1 border-gray-200 w-[40%] max-xl:w-[30%] max-md:w-[45%]">
           <div className="w-3 h-8 bg-primary "></div>
           <div className="flex flex-col gap-2 ml-">
             <div className="w-0.5 h-0.5 rounded-full bg-gray-600"></div>
@@ -37,7 +37,7 @@ export default function Section() {
         </div>
       </div>
       <div className="px-5 mt-5">
-        <div className=" items-center flex gap-1 border-1 border-gray-200 w-[40%] max-xl:w-[30%]">
+        <div className=" items-center flex gap-1 border-1 border-gray-200 w-[40%] max-xl:w-[30%] max-md:w-[45%]">
           <div className="w-3 h-8 bg-primary "></div>
           <div className="flex flex-col gap-2 ml-">
             <div className="w-0.5 h-0.5 rounded-full bg-gray-600"></div>
@@ -116,7 +116,7 @@ export default function Section() {
             </li>
           </ol>
 
-          <div className="mt-8 pb-8 ">
+          <div className="mt-5 pb-8 ">
             <button className='flex gap-2 items-center rounded-lg pl-4 pr-9 py-2 bg-primary text-white '>
               <span>
                 <IoMdNotifications />

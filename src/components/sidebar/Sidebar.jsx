@@ -10,7 +10,7 @@ export default function Sidebar() {
 
     const cancelToggleSidebar = () => setToggleSideBar(false)
   return (
-    <aside className={`w-72 ${!toggleSideBar && 'max-md:hidden' }  max-md:fixed max-md:w-full max-md:left-0 max-md:right-0  h-screen overflow-y-auto z-100 max-md:bg-[linear-gradient(to_right,rgba(0,0,0,0.8),rgba(0,0,0,0.8))]`}>
+    <aside className={`w-72 ${!toggleSideBar && 'max-md:hidden' }  max-md:fixed max-md:w-full max-md:left-0 max-md:right-0  h-screen overflow-y-auto z-50 max-md:bg-[linear-gradient(to_right,rgba(0,0,0,0.8),rgba(0,0,0,0.8))]`}>
       <div className="w-64 bg-white h-screen overflow-auto max-md:w-[75%]">
         <div className="">
           <div className="pt-4 px-4 flex justify-between items-center">
