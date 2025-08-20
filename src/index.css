@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+
+@theme {
+  --color-primary: #ED4899;
+  --color-sidebar: #1C1C1C;
+  --color-text-dark: #111827;
+  --color-text-light: #6B7280;
+  --color-success: #10B981;
+  --color-info: #14B8A6;
+  --color-warning: #8B5CF6;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+
+.qwitcher-grypen-regular {
+  font-family: "Qwitcher Grypen", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.qwitcher-grypen-bold {
+  font-family: "Qwitcher Grypen", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
