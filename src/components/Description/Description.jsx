@@ -18,9 +18,9 @@ const Description = () => {
         toggleView ? "max-xl:flex" : "max-xl:hidden"
       } w-full max-xl:bg-[linear-gradient(to_right,rgba(0,0,0,0.8),rgba(0,0,0,0.8))] max-xl:fixed max-xl:top-0 max-xl:left-0 max-xl:right-0 max-xl:bottom-0  2xl:block 2xl:w-[28%] 2xl:p-4 overflow-y-auto  2xl:h-screen z-100 max-xl:py-5`}
     >
-      <div className="w-full 2xl:bg-white 2xl:h-screen max-xl:h-[calc(100vh+13rem)]  max-lg:h-[1100px]  max-md:h-[1550p overflow-auto  flex justify-center z-999 max-xl:my-5">
+      <div className="w-full 2xl:bg-white 2xl:h-screen max-xl:h-[1030px] max-lg:h-[1140px] max-md:h-[1110px]  max-sm:h-[1340px] overflow-auto  flex justify-center z-999 max-xl:my-5">
         {toggleView ? (
-          <div className="2xl:border-2 border-slate-200 bg-white 2xl:w-full max-xl:w-[80%] max-md:w-[95%]  2xl:h-screen max-lg:h-[1550px] rounded-md py-6 md:px-4 2xl:px-0">
+          <div className="2xl:border-2 border-slate-200 bg-white 2xl:w-full max-xl:w-[80%] max-md:w-[95%]  2xl:h-screen rounded-md py-6 md:px-4 2xl:px-0">
             <div className="mx-7">
               <div className="flex items-center justify-between">
                 <p>G-Doc Review</p>
