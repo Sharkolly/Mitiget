@@ -7,7 +7,7 @@ const Layout = () => {
   const { toggleView } = useContextStore();
 
   return (
-    <div className="flex h-screen bg-gray-100">
+    <div className="md:flex h-screen bg-gray-100 w-full max-md:w-[100%] max-md:mx-auto">
       <Sidebar />
       <MainPage />
       {toggleView && <Description />}

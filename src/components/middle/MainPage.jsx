@@ -17,10 +17,10 @@ export default function MainPage() {
   const ToggleSidebar = () => setToggleSideBar(true);
 
   return (
-    <main className="flex-1 py-4 overflow-y-auto  h-screen">
+    <main className="flex-1 py-4 overflow-y-auto  h-screen max-md:w-[100%] max-md:mx-auto ">
       <div className="">
         <div className="pb-4 md:hidden px-4 flex justify-between items-center">
-          <p className="text-4xl italic .qwitcher-grypen-regular text-primary">
+          <p className="qwitcher-grypen-bold text-6xl text-primary">
             M - Clarion
           </p>
           <span
@@ -76,7 +76,7 @@ export default function MainPage() {
             <p className="text-primary">G-Doc Library</p>
           </div>
 
-          <div className="flex mt-10 max-md:flex-col max-md:mt-5">
+          <div className="flex mt-10 max-md:flex-col max-md:mt-5 max-md:gap-5">
             <Filters />
             <SearchResults />
           </div>

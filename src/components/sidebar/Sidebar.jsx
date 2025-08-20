@@ -6,18 +6,25 @@ import { IoPerson } from "react-icons/io5";
 import { useContextStore } from "../../hooks/ContextStore";
 
 export default function Sidebar() {
-  const {setToggleSideBar, toggleSideBar} = useContextStore();
+  const { setToggleSideBar, toggleSideBar } = useContextStore();
 
-    const cancelToggleSidebar = () => setToggleSideBar(false)
+  const cancelToggleSidebar = () => setToggleSideBar(false);
   return (
-    <aside className={`w-72 ${!toggleSideBar && 'max-md:hidden' }  max-md:fixed max-md:w-full max-md:left-0 max-md:right-0  h-screen overflow-y-auto z-50 max-md:bg-[linear-gradient(to_right,rgba(0,0,0,0.8),rgba(0,0,0,0.8))]`}>
-      <div className="w-64 bg-white h-screen overflow-auto max-md:w-[75%]">
+    <aside
+      className={`w-72 ${
+        !toggleSideBar && "max-md:hidden"
+      } relative  max-md:fixed max-md:w-full max-md:left-0 max-md:right-0  h-screen overflow-y-auto z-50 max-md:bg-[linear-gradient(to_right,rgba(0,0,0,0.8),rgba(0,0,0,0.8))]`}
+    >
+      <div className="w-64 bg-white h-[680px] max-xl:h-screen  overflow-auto max-md:w-[75%]">
         <div className="">
           <div className="pt-4 px-4 flex justify-between items-center">
-            <p className="text-4xl italic ..qwitcher-grypen-regular text-primary">
+            <p className="text-6xl italic qwitcher-grypen-bold  text-primary">
               M - Clarion
             </p>
-            <span className="w-7 h-7 bg-red-600 flex items-center justify-center text-white rounded-md cursor-pointer md:hidden " onClick={cancelToggleSidebar}>
+            <span
+              className="w-7 h-7 bg-red-600 flex items-center justify-center text-white rounded-md cursor-pointer md:hidden "
+              onClick={cancelToggleSidebar}
+            >
               {/* <MdCancel className="text-red-600 text-2xl" /> */}
               <p className="text-2xl">x</p>
             </span>
@@ -108,6 +115,8 @@ export default function Sidebar() {
           </div>
         </div>
       </div>
+
+      <div className="absolute bottom-0 h-[300px]  z-[-10] bg-black w-72 max-xl:hidden"></div>
     </aside>
   );
 }
