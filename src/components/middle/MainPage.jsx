@@ -17,7 +17,7 @@ export default function MainPage() {
   const ToggleSidebar = () => setToggleSideBar(true);
 
   return (
-    <main className="flex-1 py-4 overflow-y-auto h-screen">
+    <main className="flex-1 py-4 overflow-y-auto  h-screen">
       <div className="">
         <div className="pb-4 md:hidden px-4 flex justify-between items-center">
           <p className="text-4xl italic .qwitcher-grypen-regular text-primary">
@@ -69,7 +69,7 @@ export default function MainPage() {
           </div>
         </div>
 
-        <div className="bg-white pl-3 mt-4 pt-0.5 max-lg:w-[150%] max-md:w-full ">
+        <div className="bg-white pl-3 max-md:pl-1 mt-4 pt-0.5 max-lg:w-[150%] max-md:w-full ">
           <div className="flex items-center gap-4 border-1  px-5 py-1 border-gray-400 mt-5 rounded-md justify-self-start">
             <p>Policy</p>
             <span className="text-xl">&gt;</span>
