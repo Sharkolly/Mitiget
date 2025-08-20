@@ -15,7 +15,7 @@ const Description = () => {
   const cancel_button = () => setToggleView(false);
 
   return (
-    <section className="hidden w-full max-xl:bg-[linear-gradient(to_right,rgba(0,0,0,0.8),rgba(0,0,0,0.8))] max-xl:fixed max-xl:top-0 max-xl:left-0 max-xl:right-0 max-xl:bottom-0  2xl:block 2xl:w-[28%] 2xl:p-4 overflow-y-auto 2xl:h-screen ">
+    <section className={`${toggleView ? 'max-xl:flex' : 'max-xl:hidden'} w-full max-xl:bg-[linear-gradient(to_right,rgba(0,0,0,0.8),rgba(0,0,0,0.8))] max-xl:fixed max-xl:top-0 max-xl:left-0 max-xl:right-0 max-xl:bottom-0  2xl:block 2xl:w-[28%] 2xl:p-4 overflow-y-auto 2xl:h-screen `}>
       <div className="w-full 2xl:bg-white 2xl:h-screen overflow-auto  flex justify-center z-999 max-xl:my-5">
       {toggleView ? (
         <div className="2xl:border-2 border-slate-200 bg-white 2xl:w-full max-xl:w-[80%] max-md:w-[95%]  2xl:h-screen rounded-md py-6 md:px-4 2xl:px-0">
