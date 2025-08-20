@@ -64,7 +64,7 @@ const Results = ({ results }) => {
                 )}
               </span>
             </div>
-            <div className="flex ml-2  gap-3 w-full max-md:mx-2">
+            <div className="flex ml-2  gap-3 w-full max-md:ml-4">
               <span className="w-11 rounded-sm h-11 max-md:w-8 max-md:h-8 flex justify-center items-center bg-primary ">
                 <IoDocumentTextSharp className="text-2xl text-white" />
               </span>
